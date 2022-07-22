@@ -17,46 +17,50 @@
         </v-list-item>
       </template>
 
-      <v-divider class="mt-12"></v-divider>
+      <v-divider class="mt-10"></v-divider>
+            <v-list>
+            <v-list-item>
+                <v-list-item-icon>
+                <v-icon>mdi-chart-box-outline</v-icon>
+                </v-list-item-icon>
 
-      <v-list dense>
-        <v-list-item
-          v-for="item in items"
-          :key="item.title"
-        >
-          <v-list-item-icon>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-item-icon>
+                
+                <v-list-item-title>Dashboard</v-list-item-title>
+            </v-list-item>
 
-          <v-list-item-content>
-            <v-list-item-title>{{ item.title }}</v-list-item-title>
-          </v-list-item-content>
-            <div v-if="item.title=='Pronosticos'">
-                <v-menu offset-y>
-                  <template v-slot:activator="{ on }">
-                    <v-btn                    
-                      small
-                      v-bind="attrs"
-                      v-on="on"
-                      >
-                        <v-icon>mdi-arrow-down-drop-circle</v-icon>                 
-                    </v-btn>
-                  </template>
-                  <v-list class="overflow-y-auto">
-                  <v-list-tile
-                    v-for="(item, index) in items2"
-                    :key="index"
-                    @click="saludar"
-                  >
-                  
-                    <v-list-tile-title>{{ item.title }}</v-list-tile-title>
-                    </v-list-tile>
-                     
-                  </v-list>
-                  </v-menu>
-            </div>
-        </v-list-item>
-      </v-list>
+            <v-list-group
+                :value="true"
+                prepend-icon="mdi-chart-line"
+            >
+                <template v-slot:activator>
+                <v-list-item-title>Pronosticos</v-list-item-title>
+                </template>
+                <v-list-item
+                    v-for="item in items2"
+                    :key="item.title"
+                    link
+                >
+                <v-list-item-icon class="pl-8">
+                    <v-icon>{{ item.icon }}</v-icon>
+                </v-list-item-icon>
+                <v-list-item-content>
+                    <v-list-item-title>{{ item.title }}</v-list-item-title>
+                </v-list-item-content>
+
+                    
+                </v-list-item>
+            </v-list-group>
+            <v-list-item>
+                <v-list-item-icon>
+                <v-icon>mdi-account</v-icon>
+                </v-list-item-icon>
+
+                
+                <v-list-item-title>Mis datos</v-list-item-title>
+            </v-list-item>
+            </v-list>
+       
+
       <v-divider class="mt-15"></v-divider>
       <v-list dense>
         <v-list-item
@@ -79,28 +83,28 @@
     data () {
       return {
         items: [
-          { title: 'Dashboard', icon: 'mdi-home-city' },
-          { title: 'Mis datos', icon: 'mdi-account' },
-          { title: 'Pronosticos', icon: 'mdi-account-group-outline' },
+          { title: 'Dashboard', icon: 'mdi-chart-box-outline', action:'empty' },
+          { title: 'Mis datos', icon: 'mdi-card-account-mail-outline' , action:'empty'},
+          { title: 'Pronosticos', icon: 'mdi-chart-line' , action:'desplegarMenu'},
         ],
         items1: [
-          { title: 'Perfil', icon: 'mdi-home-city' },
-          { title: 'Soporte', icon: 'mdi-account' },
-          { title: 'Configuración', icon: 'mdi-account-group-outline' },
+          { title: 'Perfil', icon: 'mdi-account' },
+          { title: 'Soporte', icon: 'mdi-phone-outline' },
+          { title: 'Configuración', icon: 'mdi-cog-outline' },
         ],items2: [
-          { title: 'Ventas', icon: 'mdi-home-city' },
-          { title: 'Inventario', icon: 'mdi-account' },
-          { title: 'Agregar', icon: 'mdi-account-group-outline' },
+          { title: 'Ventas', icon: 'mdi-shopping-outline' },
+          { title: 'Inventario', icon: 'mdi-package-variant-closed' },
+          { title: 'Agregar', icon: 'mdi-plus-circle-outline' },
         ],
+        menuPronosticoVisible:false,
       }
     },
     methods: {
-    saludar: function (event) {
-      // `this` dentro de los métodos apunta a la instancia de Vue
-      alert('Hola ')
-      // `evento` es el evento DOM nativo
-      if (event) {
-        alert(event.target.tagName)
+   menuActionClick(action) {
+      if (action === "empty") {
+        alert('TEST!!')
+      } else if (action === "desplegarMenu") {
+        this.menuPronosticoVisible=true
       }
     }
   }
