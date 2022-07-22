@@ -31,6 +31,30 @@
           <v-list-item-content>
             <v-list-item-title>{{ item.title }}</v-list-item-title>
           </v-list-item-content>
+            <div v-if="item.title=='Pronosticos'">
+                <v-menu offset-y>
+                  <template v-slot:activator="{ on }">
+                    <v-btn                    
+                      small
+                      v-bind="attrs"
+                      v-on="on"
+                      >
+                        <v-icon>mdi-arrow-down-drop-circle</v-icon>                 
+                    </v-btn>
+                  </template>
+                  <v-list class="overflow-y-auto">
+                  <v-list-tile
+                    v-for="(item, index) in items2"
+                    :key="index"
+                    @click="saludar"
+                  >
+                  
+                    <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+                    </v-list-tile>
+                     
+                  </v-list>
+                  </v-menu>
+            </div>
         </v-list-item>
       </v-list>
       <v-divider class="mt-15"></v-divider>
@@ -42,7 +66,6 @@
           <v-list-item-icon>
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-item-icon>
-
           <v-list-item-content>
             <v-list-item-title>{{ item.title }}</v-list-item-title>
           </v-list-item-content>
@@ -64,8 +87,22 @@
           { title: 'Perfil', icon: 'mdi-home-city' },
           { title: 'Soporte', icon: 'mdi-account' },
           { title: 'Configuración', icon: 'mdi-account-group-outline' },
+        ],items2: [
+          { title: 'Ventas', icon: 'mdi-home-city' },
+          { title: 'Inventario', icon: 'mdi-account' },
+          { title: 'Agregar', icon: 'mdi-account-group-outline' },
         ],
       }
     },
+    methods: {
+    saludar: function (event) {
+      // `this` dentro de los métodos apunta a la instancia de Vue
+      alert('Hola ')
+      // `evento` es el evento DOM nativo
+      if (event) {
+        alert(event.target.tagName)
+      }
+    }
+  }
   }
 </script>
