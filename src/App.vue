@@ -10,15 +10,12 @@
 </template>
 
 <script>
-import barraLateral from './components/barraLateral.vue';
-
+import barraLateral from './views/dashBoard.vue';
 export default {
   name: 'App',
-
   components: {
     barraLateral
   },
-
   data: () => ({
     //
   }),
