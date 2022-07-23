@@ -54,7 +54,18 @@
                     
                 </v-list-item>
             </v-list-group>
+<<<<<<< HEAD
             
+=======
+            <v-list-item>
+                <v-list-item-icon>
+                <v-icon>mdi-archive-arrow-down-outline</v-icon>
+                </v-list-item-icon>
+
+                
+                <v-list-item-title>Mis datos</v-list-item-title>
+            </v-list-item>
+>>>>>>> e40e9bddc7ad89c885dfb35715c7a6df4c344105
             </v-list>
       <v-divider class="mt-15"></v-divider>
       <v-list dense>
