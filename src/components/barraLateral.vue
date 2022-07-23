@@ -17,6 +17,14 @@
       </template>
       <v-divider class="mt-8"></v-divider>
             <v-list>
+              <v-list-item>
+                <v-list-item-icon>
+                <v-icon>mdi-text-box-multiple-outline</v-icon>
+                </v-list-item-icon>
+
+                
+                <v-list-item-title>Banco de datos</v-list-item-title>
+            </v-list-item>
             <v-list-item>
                 <v-list-item-icon>
                 <v-icon>mdi-chart-box-outline</v-icon>
@@ -46,14 +54,7 @@
                     
                 </v-list-item>
             </v-list-group>
-            <v-list-item>
-                <v-list-item-icon>
-                <v-icon>mdi-account</v-icon>
-                </v-list-item-icon>
-
-                
-                <v-list-item-title>Mis datos</v-list-item-title>
-            </v-list-item>
+            
             </v-list>
       <v-divider class="mt-15"></v-divider>
       <v-list dense>

@@ -11,7 +11,7 @@
 
 <script>
 import barraLateral from './components/barraLateral.vue';
-import vistaPronosticoVue from './views/vistaPronostico.vue';
+import vistaPronosticoVue from './views/vistaPronosticoVentas.vue';
 export default {
   name: 'App',
   components: {

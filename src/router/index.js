@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import dashBoard from '../views/dashBoard.vue'
-import vistaPronostico from '../views/vistaPronostico.vue'
+import vistaPronostico from '../views/vistaPronosticoVentas.vue'
 
 Vue.use(VueRouter)
 

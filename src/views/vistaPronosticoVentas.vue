@@ -2,8 +2,39 @@
     <div>
         <v-row class="mt-15 pl-15">
             <v-col class="text-center" cols="3">
-                <v-file-input class="bakgroundColorBlue" prepend-icon="mdi-tray-arrow-up" label="Cargar datos"  >
+
+                <h2 class="mt-15">Seleccione el conjunto de datos</h2>
+                <template>
+                    <div class="text-center">
+                        <v-menu offset-y>
+                        <template v-slot:activator="{ on, attrs }">
+                            <v-btn
+                            color="rgba(194, 224, 243, 0.507)"
+                            v-bind="attrs"
+                            v-on="on"
+                            >
+                            <v-icon>mdi-file-chart</v-icon>
+                            Datos
+                            </v-btn>
+                        </template>
+                        <v-list>
+                            <v-list-item
+                            v-for="(item, index) in items1"
+                            :key="index"
+                            @click="calcularPresicion(item.action)"
+                            >
+                            <v-icon>{{item.icon}}</v-icon>
+                            <v-list-item-title>{{ item.title }}</v-list-item-title>
+                            </v-list-item>
+                        </v-list>
+                        </v-menu>
+                    </div>
+                </template>
+                <!--
+ <v-file-input class="bakgroundColorBlue" prepend-icon="mdi-tray-arrow-up" label="Cargar datos"  >
                 </v-file-input>
+                -->
+               
                 <v-divider class="mt-15"></v-divider>
                 <h2 class="mt-15">Seleccione el modelo</h2>
                 <template>
@@ -32,7 +63,7 @@
                         </v-menu>
                     </div>
                 </template>
-                <h2 class="mt-15">Presición del modelo</h2>
+                <h2 class="mt-15">Precisión del modelo</h2>
                 <v-progress-linear
                     color="#24A0DA"
                     :value=precisionModeloSelect
@@ -43,7 +74,7 @@
             </v-col>
             <v-col cols="9">
             <template>
-                <iframe src="@/assets/graficaPronostico.html"></iframe>
+                <iframe src=""></iframe>
             </template>
             </v-col>
         </v-row>
@@ -62,6 +93,11 @@
           { title: 'Modelo 1', icon: 'mdi-chart-bell-curve', action:'calcularPresicion1' },
           { title: 'Modelo 2', icon: 'mdi-chart-histogram', action:'calcularPresicion2' },
           { title: 'Modelo 3', icon: 'mdi-graph', action:'calcularPresicion3'},
+        ],
+        items1: [
+          { title: 'Datos 1', icon: 'mdi-chart-bell-curve', action:'calcularPresicion1' },
+          { title: 'Datos 2', icon: 'mdi-chart-histogram', action:'calcularPresicion2' },
+          { title: 'Datos 3', icon: 'mdi-graph', action:'calcularPresicion3'},
         ]
       }
     },
