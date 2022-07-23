@@ -10,7 +10,9 @@
                     <div class="text-center">
                         <v-menu offset-y>
                         <template v-slot:activator="{ on, attrs }">
+                            <br>
                             <v-btn
+                            x-large
                             color="rgba(194, 224, 243, 0.507)"
                             v-bind="attrs"
                             v-on="on"
@@ -41,17 +43,22 @@
                     rounded
                 > {{precisionModeloSelect}}% </v-progress-linear>
             </v-col>            
-            <v-col cols="9">
-                <template>
-                    <iframe src=""></iframe>
-                </template>
-            </v-col>
+            
         </v-row>
     </div>
 </template>
 
 }
 <script>
+
+/*
+<v-col cols="9">
+                <template>
+                    <iframe src=""></iframe>
+                </template>
+            </v-col>
+*/
+
   export default {
     data () {
       return {

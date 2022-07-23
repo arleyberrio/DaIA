@@ -48,7 +48,7 @@
             </v-list-group>
             <v-list-item>
                 <v-list-item-icon>
-                <v-icon>mdi-account</v-icon>
+                <v-icon>mdi-archive-arrow-down-outline</v-icon>
                 </v-list-item-icon>
 
                 
