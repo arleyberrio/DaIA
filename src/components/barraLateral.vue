@@ -1,11 +1,10 @@
 <template>
-  <v-card height="700px">
     <v-navigation-drawer
-      absolute
+      app
       permanent
       left
     >
-      <template v-slot:prepend>
+      <template >
         <v-list-item two-line>
           <v-list-item-avatar>
             <v-img src="../assets/logo.jpg"></v-img>
@@ -16,15 +15,12 @@
           </v-list-item-content>
         </v-list-item>
       </template>
-
-      <v-divider class="mt-10"></v-divider>
+      <v-divider class="mt-8"></v-divider>
             <v-list>
             <v-list-item>
                 <v-list-item-icon>
                 <v-icon>mdi-chart-box-outline</v-icon>
                 </v-list-item-icon>
-
-                
                 <v-list-item-title>Dashboard</v-list-item-title>
             </v-list-item>
 
@@ -59,8 +55,6 @@
                 <v-list-item-title>Mis datos</v-list-item-title>
             </v-list-item>
             </v-list>
-       
-
       <v-divider class="mt-15"></v-divider>
       <v-list dense>
         <v-list-item
@@ -76,17 +70,11 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-  </v-card>
 </template>
 <script>
   export default {
     data () {
       return {
-        items: [
-          { title: 'Dashboard', icon: 'mdi-chart-box-outline', action:'empty' },
-          { title: 'Mis datos', icon: 'mdi-card-account-mail-outline' , action:'empty'},
-          { title: 'Pronosticos', icon: 'mdi-chart-line' , action:'desplegarMenu'},
-        ],
         items1: [
           { title: 'Perfil', icon: 'mdi-account' },
           { title: 'Soporte', icon: 'mdi-phone-outline' },
