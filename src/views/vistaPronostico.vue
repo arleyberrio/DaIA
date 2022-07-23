@@ -40,17 +40,15 @@
                     class="mt-7"
                     rounded
                 > {{precisionModeloSelect}}% </v-progress-linear>
-            </v-col>
+            </v-col>            
             <v-col cols="9">
-            <template>
-                <iframe src="@/assets/graficaPronostico.html"></iframe>
-            </template>
+                <template>
+                    <iframe src=""></iframe>
+                </template>
             </v-col>
         </v-row>
     </div>
 </template>
-
-
 
 }
 <script>
