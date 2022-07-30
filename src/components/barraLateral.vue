@@ -43,6 +43,7 @@
                     v-for="item in items2"
                     :key="item.title"
                     link
+                    @click="routePage(item.ruta)"
                 >
                 <v-list-item-icon class="pl-8">
                     <v-icon>{{ item.icon }}</v-icon>
@@ -53,19 +54,7 @@
 
                     
                 </v-list-item>
-            </v-list-group>
-<<<<<<< HEAD
-            
-=======
-            <v-list-item>
-                <v-list-item-icon>
-                <v-icon>mdi-archive-arrow-down-outline</v-icon>
-                </v-list-item-icon>
-
-                
-                <v-list-item-title>Mis datos</v-list-item-title>
-            </v-list-item>
->>>>>>> e40e9bddc7ad89c885dfb35715c7a6df4c344105
+            </v-list-group>            
             </v-list>
       <v-divider class="mt-15"></v-divider>
       <v-list dense>
@@ -92,21 +81,26 @@
           { title: 'Soporte', icon: 'mdi-phone-outline' },
           { title: 'Configuración', icon: 'mdi-cog-outline' },
         ],items2: [
-          { title: 'Ventas', icon: 'mdi-shopping-outline' },
-          { title: 'Inventario', icon: 'mdi-package-variant-closed' },
-          { title: 'Agregar', icon: 'mdi-plus-circle-outline' },
+          { title: 'Ventas', icon: 'mdi-shopping-outline', ruta:'vistaPronosticoVentas' },
+          { title: 'Inventario', icon: 'mdi-package-variant-closed',ruta:'vistaPronosticoInventarios' },
+          { title: 'Agregar', icon: 'mdi-plus-circle-outline' ,ruta:'agregarPronostico'},
         ],
-        menuPronosticoVisible:false,
       }
     },
     methods: {
-   menuActionClick(action) {
-      if (action === "empty") {
-        alert('TEST!!')
-      } else if (action === "desplegarMenu") {
-        this.menuPronosticoVisible=true
-      }
-    }
+    routePage(page) {
+       switch(page) { 
+        case 'vistaPronosticoVentas': 
+        this.$router.push({path: '/vistaPronosticoVentas',name: 'vistaPronosticoVentas'});
+        break;
+        case 'vistaPronosticoInventarios': 
+        console.log("pronosticos")
+        this.$router.push({path: '/vistaPronosticoInventarios',name: 'vistaPronosticoInventarios'}) ;
+        break;
+        default:
+          console.log("Aún no hay mas opciones");
+       }
+      },
   }
   }
 </script>

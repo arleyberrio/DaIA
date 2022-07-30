@@ -1,8 +1,7 @@
 <template>    
     <div>
-        <v-row class="mt-10  pl-15">
+        <v-row class="mt-10 pl-15">
             <v-col class="text-center" cols="3">
-                <h3 >Prueba</h3>
                 <h3 class="mt-15">Seleccione el conjunto de datos</h3>
                 <template>
                     <div class="text-center">
@@ -84,7 +83,7 @@
                     justify="center">
                         <v-img 
                         v-if="viewModel"
-                        src="../assets/pronosticoventas.png"
+                        src="../assets/predictinventarios.png"
                         max-width="620"
                         >  
                         </v-img>
@@ -94,7 +93,7 @@
                     class="mt-10">
                         <v-img 
                         v-if="viewModel"
-                        src="../assets/analisisfinan.png"
+                        src="../assets/costosmes.png"
                         max-width="620"
                         center>                            
                         </v-img>
@@ -102,7 +101,6 @@
             </v-col>
         </v-row>
     </div>
-
 </template>
 
 }
