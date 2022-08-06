@@ -148,7 +148,7 @@
                 {{numObservaciones}}
                 </v-alert>
                     
-                    <v-divider class="mt-2"></v-divider>
+                <v-divider class="mt-2"></v-divider>
                 <h3 class="mt-2">Periodo del pronóstico</h3>
                      <seccion-calendarios></seccion-calendarios>  
                 <v-btn

@@ -19,12 +19,30 @@
                 </v-list-item-icon>       
                 <v-list-item-title>Banco de datos</v-list-item-title>
             </v-list-item>
-            <v-list-item>
-                <v-list-item-icon>
-                <v-icon>mdi-chart-box-outline</v-icon>
-                </v-list-item-icon>
+            
+            <v-list-group
+                :value="true"
+                prepend-icon="mdi-chart-pie"
+            >
+                <template v-slot:activator>
                 <v-list-item-title>Dashboard</v-list-item-title>
-            </v-list-item>
+                </template>
+                <v-list-item
+                    v-for="item in items3"
+                    :key="item.title"
+                    link
+                    @click="routePage(item.ruta)"
+                >
+                <v-list-item-icon class="pl-8">
+                    <v-icon>{{ item.icon }}</v-icon>
+                </v-list-item-icon>
+                <v-list-item-content>
+                    <v-list-item-title>{{ item.title }}</v-list-item-title>
+                </v-list-item-content>
+
+                    
+                </v-list-item>
+            </v-list-group>   
 
             <v-list-group
                 :value="true"
@@ -79,6 +97,10 @@
           { title: 'Inventario', icon: 'mdi-package-variant-closed',ruta:'vistaPronosticoInventarios' },
           { title: 'Agregar', icon: 'mdi-plus-circle-outline' ,ruta:'agregarPronostico'},
         ],
+          items3: [
+          { title: 'Inventario', icon: 'mdi-chart-line-variant', ruta:'dashBoard' },
+          { title: 'Ventas', icon: 'mdi-currency-usd',ruta:'dashBoard' },          
+        ],
       }
     },
     methods: {
@@ -89,6 +111,9 @@
         break;
         case 'vistaPronosticoInventarios': 
         this.$router.push({path: '/vistaPronosticoInventarios',name: 'vistaPronosticoInventarios'}) ;
+        break;
+        case 'dashBoard': 
+        this.$router.push({path: '/dashBoard',name: 'dashBoard'});
         break;
         default:
           console.log("Aún no hay mas opciones");
