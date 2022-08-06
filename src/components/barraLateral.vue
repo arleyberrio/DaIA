@@ -23,7 +23,8 @@
                 <v-list-item-icon>
                 <v-icon>mdi-chart-box-outline</v-icon>
                 </v-list-item-icon>
-                <v-list-item-title>Dashboard</v-list-item-title>
+                <v-list-item-title 
+                @click="routePage('dashBoard')">Dashboard</v-list-item-title>
             </v-list-item>
 
             <v-list-group
@@ -90,6 +91,9 @@
         case 'vistaPronosticoInventarios': 
         console.log("pronosticos")
         this.$router.push({path: '/vistaPronosticoInventarios',name: 'vistaPronosticoInventarios'}) ;
+        break;
+        case 'dashBoard': 
+        this.$router.push({path: '/dashBoard',name: 'dashBoard'});
         break;
         default:
           console.log("Aún no hay mas opciones");
