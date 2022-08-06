@@ -1,7 +1,6 @@
 <template>  
-    <div>
-        
-        <v-card max-width="950">
+    <div>        
+        <v-card max-width="950" class="mt-5">
             <v-toolbar flat>                                                
                 <v-tabs                    
                 fixed-tabs
@@ -61,8 +60,6 @@
                         </v-tab-item>
             </v-tabs-items>
         </v-card>
-
-        
                 <v-row class="mt-6 ml-8"
                     justify="left">
                         <v-img             
