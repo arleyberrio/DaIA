@@ -6,23 +6,17 @@
     >
       <template >
         <v-list-item two-line>
-          <v-list-item-avatar>
-            <v-img src="../assets/logo.jpg"></v-img>
-          </v-list-item-avatar>
-
-          <v-list-item-content>
-            <h2>DaIA</h2>
+                 <v-list-item-content >
+            <v-img  max-width="180px"  src="../assets/logo.jpg"></v-img>
           </v-list-item-content>
         </v-list-item>
       </template>
-      <v-divider class="mt-8"></v-divider>
+      <v-divider ></v-divider>
             <v-list>
               <v-list-item>
                 <v-list-item-icon>
                 <v-icon>mdi-text-box-multiple-outline</v-icon>
-                </v-list-item-icon>
-
-                
+                </v-list-item-icon>       
                 <v-list-item-title>Banco de datos</v-list-item-title>
             </v-list-item>
             <v-list-item>
@@ -56,7 +50,7 @@
                 </v-list-item>
             </v-list-group>            
             </v-list>
-      <v-divider class="mt-15"></v-divider>
+      <v-divider></v-divider>
       <v-list dense>
         <v-list-item
           v-for="item in items1"

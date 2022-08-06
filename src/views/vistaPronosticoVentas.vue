@@ -2,7 +2,6 @@
     <div>
         <v-row class="mt-10  pl-15">
             <v-col class="text-center" cols="3">
-                <h3 >Prueba</h3>
                 <h3 class="mt-15">Seleccione el conjunto de datos</h3>
                 <template>
                     <div class="text-center">
