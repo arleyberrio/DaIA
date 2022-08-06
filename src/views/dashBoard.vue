@@ -1,72 +1,84 @@
-<template>    
-      <div>        
-          <v-row>            
-            <v-col>
-              <Bar :chart-data="chartData"/> 
-            </v-col>                        
-            <v-col>
-              <canvas id="myChart" ></canvas>   
-            </v-col>                                   
-          </v-row>                               
-      </div>         
+<template>  
+    <div>
+        
+        <v-card max-width="950">
+            <v-toolbar flat>                                                
+                <v-tabs                    
+                fixed-tabs
+                >
+                    <v-tabs-slider></v-tabs-slider>
+                    <v-tab
+                        href="#mobile-tabs-5-1"
+                        class="primary--text"
+                    >
+                        <v-icon>mdi-note-plus-outline</v-icon>
+                        Add page
+                    </v-tab>
+                    <v-tab
+                        href="#mobile-tabs-5-2"
+                        class="primary--text"
+                    >
+                        <v-icon>mdi-database</v-icon>
+                        Add data
+                    </v-tab>
+                    <v-tab
+                        href="#mobile-tabs-5-3"
+                        class="primary--text"
+                    >
+                        <v-icon>mdi-equalizer</v-icon>
+                        Add grafic
+                    </v-tab>
+                    <v-tab
+                        href="#mobile-tabs-5-4"
+                        class="primary--text"
+                    >
+                        <v-icon>mdi-image-plus-outline</v-icon>
+                        Add image
+                    </v-tab>
+                    <v-tab
+                        href="#mobile-tabs-5-5"
+                        class="primary--text"
+                    >
+                        <v-icon>mdi-pencil-outline</v-icon>
+                        Add text
+                    </v-tab>
+
+                    <v-tab
+                        href="#mobile-tabs-5-6"
+                        class="primary--text"
+                    >
+                        <v-icon>mdi-valve-open</v-icon>
+                        Add filter
+                    </v-tab>
+                </v-tabs>                
+                    </v-toolbar>
+                        <v-tabs-items v-model="tabs">
+                        <v-tab-item
+                            v-for="i in 6"
+                            :key="i"
+                            :value="'mobile-tabs-5-' + i"
+                        >                    
+                        </v-tab-item>
+            </v-tabs-items>
+        </v-card>
+
+        
+                <v-row class="mt-6 ml-8"
+                    justify="left">
+                        <v-img             
+                        src="../assets/Graficas1y2.png"
+                        max-width="1100"
+                        >  
+                        </v-img>
+                </v-row> 
+
+                <v-row class="ml-12"
+                    justify="left">
+                        <v-img             
+                        src="../assets/Graficas3y4.png"
+                        max-width="1100"
+                        >  
+                        </v-img>
+                </v-row>                 
+    </div>      
 </template>
-
-<script>
-import Chart from 'chart.js/auto';
-import { Bar } from 'vue-chartjs'
-import { Chart as ChartJS, Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale } from 'chart.js'
-ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale)
-
-export default 
-{
-    name: 'GraficaInicial',
-    components: { Bar },
-    data() {
-    return {      
-      chartData: {        
-        labels: [ 'Enero', 'Febrero', 'Marzo','Abril','Mayo', 'Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'],
-        datasets: [
-          {
-            label: 'Ventas por mes',
-            backgroundColor: '#24A0DA',
-            data: [10, 17, 24,18,16,27,22,12,14,23,19,32]            
-          }
-        ]
-      }
-    }
-  },  
-  
-    props:
-    {
-        msg: String    
-    },
-    mounted()
-    {
-        const ctx = document.getElementById('myChart');                             
-const data = {
- 
-  labels: [
-    'Emprendimiento',
-    'Acompañamiento',
-    'Sensibilización'        
-  ],
-  datasets: [{
-    label: 'Dona',
-    data: [20, 40, 80],
-    backgroundColor: [
-      'rgb(255, 99, 132)',
-      'rgb(54, 162, 235)',
-      'rgb(255, 205, 86)'
-    ],
-    hoverOffset: 4    
-  }]
-};
-const myChart = new Chart(ctx, 
-{
-    type: 'doughnut',
-    data: data
-})
-myChart;
-    }
-}
-</script>
