@@ -1,6 +1,7 @@
 <template>
   <v-app>
     <v-main>
+      <tool-bar></tool-bar>
       <barra-lateral></barra-lateral>
       <router-view />
     </v-main>
@@ -9,10 +10,12 @@
 
 <script>
 import barraLateral from './components/barraLateral.vue';
+import toolBar from './components/toolBar.vue';
 export default {
   name: 'App',
   components: {
-  barraLateral
+  barraLateral,
+  toolBar
   },
   data: () => ({
     //
