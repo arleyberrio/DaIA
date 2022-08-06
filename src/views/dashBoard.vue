@@ -1,7 +1,7 @@
 <template>  
     <div>
         
-        <v-card max-width="950">
+        <v-card max-width="950" class="mt-5">
             <v-toolbar flat>                                                
                 <v-tabs                    
                 fixed-tabs

@@ -15,6 +15,12 @@
             <v-list>
               <v-list-item>
                 <v-list-item-icon>
+                <v-icon>mdi-home</v-icon>
+                </v-list-item-icon>       
+                <v-list-item-title>Inicio</v-list-item-title>
+            </v-list-item>
+              <v-list-item>
+                <v-list-item-icon>
                 <v-icon>mdi-text-box-multiple-outline</v-icon>
                 </v-list-item-icon>       
                 <v-list-item-title>Banco de datos</v-list-item-title>
@@ -92,6 +98,7 @@
           { title: 'Perfil', icon: 'mdi-account' },
           { title: 'Soporte', icon: 'mdi-phone-outline' },
           { title: 'Configuración', icon: 'mdi-cog-outline' },
+          {title: 'Banco de recursos', icon: 'mdi-bookshelf'}
         ],items2: [
           { title: 'Ventas', icon: 'mdi-shopping-outline', ruta:'vistaPronosticoVentas' },
           { title: 'Inventario', icon: 'mdi-package-variant-closed',ruta:'vistaPronosticoInventarios' },
