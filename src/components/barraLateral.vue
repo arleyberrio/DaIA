@@ -88,7 +88,6 @@
         this.$router.push({path: '/vistaPronosticoVentas',name: 'vistaPronosticoVentas'});
         break;
         case 'vistaPronosticoInventarios': 
-        console.log("pronosticos")
         this.$router.push({path: '/vistaPronosticoInventarios',name: 'vistaPronosticoInventarios'}) ;
         break;
         default:
