@@ -21,7 +21,7 @@
                         </v-img>
                 </v-row> 
             </v-col>
-            <v-col class="ml-10">
+            <v-col class="ml-15">
                 <lateral-derecha-dashboard></lateral-derecha-dashboard>
             </v-col>
         </v-row>                  

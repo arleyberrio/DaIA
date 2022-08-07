@@ -1,6 +1,6 @@
 <template>
-    
-        <v-navigation-drawer permanent>                  
+    <div class="ml-4">
+      <v-navigation-drawer permanent  style="background:#F3F4F6; width: 211px; height: 650px; border-radius: 20px;">                  
         <v-list
             nav
             dense
@@ -50,6 +50,7 @@
                 </v-row>
         </v-list>
         </v-navigation-drawer>  
+    </div>        
 </template>
 <script>
   export default {
