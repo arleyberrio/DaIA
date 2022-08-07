@@ -1,5 +1,5 @@
 <template>
-    <v-card max-width="950" class="mt-5">
+    <v-card style ="border-radius: 20px;" max-width="950" class="mt-6">
             <v-toolbar flat>                                                
                 <v-tabs                    
                 fixed-tabs
@@ -45,12 +45,12 @@
                         href="#mobile-tabs-5-6"
                         class="primary--text"
                     >
-                        <v-icon>mdi-valve-open</v-icon>
+                        <v-icon>mdi-tune-vertical</v-icon>
                         Add filter
                     </v-tab>
                 </v-tabs>                
                     </v-toolbar>
-                        <v-tabs-items v-model="tabs">
+                        <v-tabs-items>
                         <v-tab-item
                             v-for="i in 6"
                             :key="i"
