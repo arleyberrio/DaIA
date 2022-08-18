@@ -6,7 +6,7 @@
                 <v-row class="mt-6 ml-8"
                 >
                     <v-img             
-                    src="../assets/Graficas1y2.png"
+                    src="https://daiaimagines.s3.amazonaws.com/Graficas1y2.png"
                     max-width="1100"
                     >  
                     </v-img>
@@ -15,7 +15,7 @@
                 <v-row class="ml-12"
                     >
                         <v-img             
-                        src="../assets/Graficas3y4.png"
+                        src="https://daiaimagines.s3.amazonaws.com/Graficas3y4.png"
                         max-width="1100"
                         >  
                         </v-img>

@@ -162,7 +162,7 @@
                     justify="center">
                         <v-img 
                         v-if="viewModel"
-                        src="../assets/pronosticoventas.png"
+                        src="https://daiaimagines.s3.amazonaws.com/pronosticoventas.png"
                         max-width="620"
                         >  
                         </v-img>
@@ -172,7 +172,7 @@
                     class="mt-10">
                         <v-img 
                         v-if="viewModel"
-                        src="../assets/analisisfinan.png"
+                        src="https://daiaimagines.s3.amazonaws.com/analisisfinan.png"
                         max-width="620"
                         center>                            
                         </v-img>
@@ -234,7 +234,7 @@ import SeccionCalendarios from '../components/seccionCalendarios.vue';
                 this.precisionModeloSelect=94
                 this.numObservaciones=4
             }
-            this.isActive=!this.isActive
+            this.isActive=true
             }
         },
         

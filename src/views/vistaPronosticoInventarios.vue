@@ -165,7 +165,7 @@
                     justify="center">
                         <v-img 
                         v-if="viewModel"
-                        src="../assets/predictinventarios.png"
+                        src="https://daiaimagines.s3.amazonaws.com/predictinventarios.png"
                         max-width="620"
                         >  
                         </v-img>
@@ -175,7 +175,7 @@
                     class="mt-10">
                         <v-img 
                         v-if="viewModel"
-                        src="../assets/costosmes.png"
+                        src="https://daiaimagines.s3.amazonaws.com/costosmes.png"
                         max-width="620"
                         center>                            
                         </v-img>
@@ -238,7 +238,7 @@ import SeccionCalendarios from '../components/seccionCalendarios.vue';
                     this.precisionModeloSelect=94
                     this.numObservaciones=4
                 }
-                this.isActive=!this.isActive
+                this.isActive=true
             }
             
         },
