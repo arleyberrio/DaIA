@@ -29,7 +29,7 @@
                         color="indigo"
                         size="36"
                         >
-                        <v-img src="../assets/juanImg.jpg"></v-img>
+                        <v-img src="https://daiaimagines.s3.amazonaws.com/juanImg.jpg"></v-img>
                         </v-avatar>
                     <v-icon>mdi-chevron-down</v-icon>
                     </v-btn>

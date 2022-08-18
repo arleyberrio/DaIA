@@ -7,7 +7,7 @@
       <template >
         <v-list-item two-line>
                  <v-list-item-content >
-            <v-img  max-width="180px"  src="../assets/logo.jpg"></v-img>
+            <v-img  max-width="180px"  src="https://daiaimagines.s3.amazonaws.com/logo.jpg"></v-img>
           </v-list-item-content>
         </v-list-item>
       </template>
